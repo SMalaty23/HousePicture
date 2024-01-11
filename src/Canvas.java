@@ -113,13 +113,13 @@ public class Canvas
     public void setForegroundColor(String colorString)
     {
         if(colorString.equals("red")) {
-            graphic.setColor(new Color(235, 25, 25));
+            graphic.setColor(new Color(106, 109, 100));
         }
         else if(colorString.equals("black")) {
             graphic.setColor(Color.black);
         }
         else if(colorString.equals("brown")) {
-            graphic.setColor(new Color(94, 47, 2));
+            graphic.setColor(new Color(181, 165, 143));
         }
         else if(colorString.equals("yellow")) {
             graphic.setColor(new Color(243, 243, 15));

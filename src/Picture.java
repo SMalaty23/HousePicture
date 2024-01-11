@@ -4,6 +4,10 @@ public class Picture
     private Square window;
     private Triangle roof1;
     private Triangle roof2;
+
+    private Square wall2;
+
+    private Square wall3;
     private Circle sun;
     private boolean drawn;
 
@@ -17,6 +21,8 @@ public class Picture
         roof1 = new Triangle();
         roof2 = new Triangle();
         sun = new Circle();
+        wall2 = new Square();
+        wall3 = new Square();
         drawn = false;
     }
 
@@ -36,17 +42,28 @@ public class Picture
             wall.changeSize(120);
             wall.makeVisible();
 
+            wall2.moveHorizontal(-110);
+            wall2.moveVertical(10);
+            wall2.changeSize(130);
+            wall2.makeVisible();
+
+            wall3.moveHorizontal(-110);
+            wall3.moveVertical(-50);
+            wall3.changeSize(175);
+            wall3.makeVisible();
+
+
             window.changeColor("black");
             window.moveHorizontal(-110);
             window.moveVertical(40);
             window.changeSize(40);
-            window.makeVisible();
+            window.makeInvisible();
 
 
             roof1.changeColor("brown");
             roof1.changeSize(60, 180);
-            roof1.moveHorizontal(20);
-            roof1.moveVertical(-100);
+            roof1.moveHorizontal(35);
+            roof1.moveVertical(-60);
             roof1.makeVisible();
 
             roof2.changeColor("black");
@@ -59,7 +76,7 @@ public class Picture
             sun.moveHorizontal(100);
             sun.moveVertical(-40);
             sun.changeSize(80);
-            sun.makeVisible();
+            sun.makeInvisible();
             drawn = true;
         }
     }
