@@ -18,7 +18,7 @@ public class Canvas
     public static Canvas getCanvas()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("BlueJ Picture Demo", 500, 300,
+            canvasSingleton = new Canvas("BlueJ Picture Demo", 700, 700,
                     Color.white);
         }
         canvasSingleton.setVisible(true);
@@ -50,7 +50,7 @@ public class Canvas
         frame.setTitle(title);
         frame.setLocation(30, 30);
         canvas.setPreferredSize(new Dimension(width, height));
-        backgroundColor = bgColor;
+        backgroundColor = Color.blue;
         frame.pack();
         objects = new ArrayList<Object>();
         shapes = new HashMap<Object, ShapeDescription>();
@@ -112,7 +112,7 @@ public class Canvas
      */
     public void setForegroundColor(String colorString)
     {
-        if(colorString.equals("red")) {
+        if(colorString.equals("grey")) {
             graphic.setColor(new Color(106, 109, 100));
         }
         else if(colorString.equals("black")) {
@@ -126,6 +126,9 @@ public class Canvas
         }
         else if(colorString.equals("green")) {
             graphic.setColor(new Color(80, 160, 60));
+        }
+        else if(colorString.equals("white")) {
+            graphic.setColor(new Color(227, 231, 239, 255));
         }
         else if(colorString.equals("magenta")) {
             graphic.setColor(Color.magenta);
